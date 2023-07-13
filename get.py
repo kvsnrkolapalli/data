@@ -29,9 +29,9 @@ class Generic:
         else:
             # chromedriver_path = '/usr/bin/chromedriver'
             # self.browser=webdriver.Chrome('/usr/lib/chromium-browser/chromedriver', options=options)
-            # self.browser=webdriver.Chrome(executable_path='/usr/bin/chromedriver', options=options)
+            self.browser=webdriver.Chrome(executable_path='/usr/bin/chromedriver', options=options)
             # self.browser=webdriver.Chrome(executable_path='C:/Users/HAMZA/Downloads/chromedriver_win32/chromedriver.exe', options=options)
-            self.browser= webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+            # self.browser= webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
         self.browser.maximize_window()
 
     def open_page(self, url: str):
@@ -144,7 +144,7 @@ def pull(page):
         status_list.pop(0)
 
 status_list=['']
-no_bro=20
+no_bro=30
 # max=794
 
 links_df=pd.read_csv('1mg.csv')
